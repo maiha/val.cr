@@ -19,14 +19,16 @@ require "val"
 class Foo
   val x = 1
   var y = "123"
-
   val z : Int32 = (a = [1]; a << 2; a.sum)
+
+  val cached? = true
 end
 
 foo = Foo.new
 foo.x         # => 1
 foo.y = "xxx" # => "xxx"
 foo.z         # => 3
+foo.cached?   # => true
 ```
 
 ## NOTE

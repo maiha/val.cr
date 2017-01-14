@@ -3,8 +3,9 @@ require "./spec_helper"
 private class Foo
   val x = 1
   var y = "123"
-
   val z : Int32 = (a = [1]; a << 2; a.sum)
+
+  val cached? = true
 end
 
 describe "README.md" do
@@ -13,5 +14,6 @@ describe "README.md" do
     foo.x          .should eq(1)
     (foo.y = "xxx").should eq("xxx")
     foo.z          .should eq(3)
+    foo.cached?    .should eq(true)
   end
 end

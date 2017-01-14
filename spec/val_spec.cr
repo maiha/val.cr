@@ -15,6 +15,12 @@ private class Foo
   val method_with_type : String = build_value
 
   val codes_with_type : Int32 = (a = [1]; a << 2; a.sum)
+
+  val question? = true
+  val question_with_type? : Bool = true
+  
+  val bang! = true
+  val bang_with_type! : Bool = true
   
   private def build_value
     "value"
@@ -58,5 +64,21 @@ describe "val" do
 
   it "method with type" do
     foo.method_with_type.should eq("value")
+  end
+
+  it "question" do
+    foo.question?.should eq(true)
+  end
+
+  it "question_with_type" do
+    foo.question_with_type?.should eq(true)
+  end
+
+  it "bang" do
+    foo.bang!.should eq(true)
+  end
+
+  it "bang_with_type" do
+    foo.bang_with_type!.should eq(true)
   end
 end

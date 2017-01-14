@@ -16,6 +16,12 @@ private class Foo
 
   var codes_with_type : Int32 = (a = [1]; a << 2; a.sum)
   
+  var question? = true
+  var question_with_type? : Bool = true
+  
+  var bang! = true
+  var bang_with_type! : Bool = true
+
   private def build_value
     "value"
   end
@@ -63,5 +69,21 @@ describe "var" do
   it "can update value" do
     foo.primitive = 2
     foo.primitive.should eq(2)
+  end
+
+  it "question" do
+    foo.question?.should eq(true)
+  end
+
+  it "question_with_type" do
+    foo.question_with_type?.should eq(true)
+  end
+
+  it "bang" do
+    foo.bang!.should eq(true)
+  end
+
+  it "bang_with_type" do
+    foo.bang_with_type!.should eq(true)
   end
 end
