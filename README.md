@@ -1,4 +1,4 @@
-# val.cr
+# val.cr [![Build Status](https://travis-ci.org/maiha/val.cr.svg?branch=master)](https://travis-ci.org/maiha/val.cr)
 
 Scala-ish lazy `val`, `var` for [Crystal](http://crystal-lang.org/).
 
