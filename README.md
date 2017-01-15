@@ -8,7 +8,7 @@ Scala-ish lazy `val`, `var` for [Crystal](http://crystal-lang.org/).
 dependencies:
   val:
     github: maiha/val.cr
-    version: 0.1.0
+    version: 0.2.0
 ```
 
 ## Usage
